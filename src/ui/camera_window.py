@@ -77,9 +77,8 @@ class CameraWindow:
                     text=f"FIRE DETECTED! Confidence: {max_conf:.2f}",
                     fg="#ff5050"
                 )
-                if not self.alert_triggered:
-                    play_alert_sound()
-                    self.alert_triggered = True
+                play_alert_sound()
+
             else:
                 if max_conf > 0:
                     self.status_label.config(
